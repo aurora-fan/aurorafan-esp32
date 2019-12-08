@@ -1,0 +1,19 @@
+{
+    "configurations": [
+        {
+            "name": "Mac",
+            "includePath": [
+                "~/Documents/Arduino/libraries/**",
+                "~/Library/Arduino15/packages/esp32/tools/**",
+                "~/Library/Arduino15/packages/esp32/hardware/esp32/1.0.3/**",
+                "/usr/local/include/**"
+            ],
+            "forcedInclude": [],
+            "intelliSenseMode": "clang-x64",
+            "compilerPath": "/usr/bin/clang",
+            "cStandard": "c11",
+            "cppStandard": "c++17"
+        }
+    ],
+    "version": 4
+}
