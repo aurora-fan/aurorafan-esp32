@@ -8,17 +8,12 @@ struct Pixel {
     uint8_t tick;
     CRGB color;
     bool hold;
+
+    static Pixel initWithImageCoordinates(const uint8_t x, const uint8_t y, const CRGB color);
 };
 
 typedef struct Pixel Pixel;
 
-Pixel PixelInitWithImageCoordinates(uint8_t x, uint8_t y, CRGB color);
-
-uint8_t convertToTick(double radians, uint8_t ticksPerRevolution);
+uint8_t convertToTick(const double radians, const uint8_t ticksPerRevolution);
 
 #endif
-
-            // "macFrameworkPath": [
-            //     "/System/Library/Frameworks",
-            //     "/Library/Frameworks"
-            // ],

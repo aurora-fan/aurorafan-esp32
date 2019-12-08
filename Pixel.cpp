@@ -5,7 +5,7 @@
 
 #include "Pixel.h"
 
-Pixel PixelInitWithImageCoordinates(uint8_t x, uint8_t y, CRGB color) {
+Pixel Pixel::initWithImageCoordinates(const uint8_t x, const uint8_t y, const CRGB color) {
     Pixel p;
 
     const double centeredX = x - 26;
@@ -24,6 +24,6 @@ Pixel PixelInitWithImageCoordinates(uint8_t x, uint8_t y, CRGB color) {
     return p;
 }
 
-uint8_t convertToTick(double radians, uint8_t ticksPerRevolution) {
+uint8_t convertToTick(const double radians, const uint8_t ticksPerRevolution) {
     return radians * (double) ticksPerRevolution / (2 * M_PI);
 }

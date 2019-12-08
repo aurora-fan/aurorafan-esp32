@@ -3,6 +3,7 @@
 #include <FastLED.h>
 #include <Wire.h>
 
+#include "fanprogram/IFanProgram.h"
 #include "FastLED_RGBW.h"
 #include "Pixel.h"
 
@@ -41,8 +42,6 @@ void clear() {
 }
 
 void setup() {
-    // FastLED.addLeds<WS2812B, BLADE_1_PORT, RGB>(blade1Rgb, getRGBWsize(LEDS_PER_BLADE));
-    // FastLED.addLeds<WS2812B, BLADE_2_PORT, RGB>(blade2Rgb, getRGBWsize(LEDS_PER_BLADE));
     FastLED.addLeds<NEOPIXEL, BLADE_1_PORT>(blade1, LEDS_PER_BLADE);
     FastLED.addLeds<NEOPIXEL, BLADE_2_PORT>(blade2, LEDS_PER_BLADE);
     FastLED.setBrightness(64);
@@ -72,16 +71,16 @@ void setup() {
     currentPixels.insert(currentPixels.begin(), testPixel3);
     currentPixels.insert(currentPixels.begin(), testPixel2);
     
-    currentPixels.insert(currentPixels.begin(), PixelInitWithImageCoordinates(28, 7, CRGB::Yellow));
-    currentPixels.insert(currentPixels.begin(), PixelInitWithImageCoordinates(26, 7, CRGB::Yellow));
-    currentPixels.insert(currentPixels.begin(), PixelInitWithImageCoordinates(24, 7, CRGB::Yellow));
-    currentPixels.insert(currentPixels.begin(), PixelInitWithImageCoordinates(22, 7, CRGB::Yellow));
-    currentPixels.insert(currentPixels.begin(), PixelInitWithImageCoordinates(21, 8, CRGB::Yellow));
-    currentPixels.insert(currentPixels.begin(), PixelInitWithImageCoordinates(21, 9, CRGB::Yellow));
-    currentPixels.insert(currentPixels.begin(), PixelInitWithImageCoordinates(21, 10, CRGB::Yellow));
-    currentPixels.insert(currentPixels.begin(), PixelInitWithImageCoordinates(52, 26, CRGB::Yellow));
-    currentPixels.insert(currentPixels.begin(), PixelInitWithImageCoordinates(26, 52, CRGB::Yellow));
-    currentPixels.insert(currentPixels.begin(), PixelInitWithImageCoordinates(0, 26, CRGB::Yellow));
+    currentPixels.insert(currentPixels.begin(), Pixel::initWithImageCoordinates(28, 7, CRGB::Yellow));
+    currentPixels.insert(currentPixels.begin(), Pixel::initWithImageCoordinates(26, 7, CRGB::Yellow));
+    currentPixels.insert(currentPixels.begin(), Pixel::initWithImageCoordinates(24, 7, CRGB::Yellow));
+    currentPixels.insert(currentPixels.begin(), Pixel::initWithImageCoordinates(22, 7, CRGB::Yellow));
+    currentPixels.insert(currentPixels.begin(), Pixel::initWithImageCoordinates(21, 8, CRGB::Yellow));
+    currentPixels.insert(currentPixels.begin(), Pixel::initWithImageCoordinates(21, 9, CRGB::Yellow));
+    currentPixels.insert(currentPixels.begin(), Pixel::initWithImageCoordinates(21, 10, CRGB::Yellow));
+    currentPixels.insert(currentPixels.begin(), Pixel::initWithImageCoordinates(52, 26, CRGB::Yellow));
+    currentPixels.insert(currentPixels.begin(), Pixel::initWithImageCoordinates(26, 52, CRGB::Yellow));
+    currentPixels.insert(currentPixels.begin(), Pixel::initWithImageCoordinates(0, 26, CRGB::Yellow));
     processTick(0);
 }
 
