@@ -9,7 +9,13 @@ struct Pixel {
     CRGB color;
     bool hold;
 
+    uint8_t x;
+    uint8_t y;
+
     static Pixel initWithImageCoordinates(const uint8_t x, const uint8_t y, const CRGB color);
+    static Pixel initWithPolarCoordinates(const uint8_t radius, const uint8_t tick, const CRGB color);
+
+    static Pixel convertImageCoordinatesToMapProjection(const Pixel pixel);
 };
 
 typedef struct Pixel Pixel;

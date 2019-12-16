@@ -7,7 +7,9 @@
                 "~/Library/Arduino15/packages/esp32/tools/**",
                 "~/Library/Arduino15/packages/esp32/hardware/esp32/1.0.3/**",
                 "/usr/local/include/**",
-                "/Applications/Arduino.app/Contents/Java/**"
+                "/Applications/Arduino.app/Contents/Java/**",
+                "/Users/michael/Library/Arduino15/packages/esp32/hardware/esp32/1.0.3/**",
+                "/Users/michael/Library/Arduino15/packages/esp32/tools/**"
             ],
             "forcedInclude": [],
             "intelliSenseMode": "clang-x64",
